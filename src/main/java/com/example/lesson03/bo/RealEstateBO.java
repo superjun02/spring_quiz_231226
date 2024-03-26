@@ -24,4 +24,16 @@ public class RealEstateBO {
 	public List<RealEstate> getRealEstateListByArea(int area, int price) {
 		return realEstateMapper.selectRealEstateListByArea(area, price);
 	}
+
+	public int addRealEstate(RealEstate realEstate) {
+		return realEstateMapper.insertRealEstate(realEstate);
+	}
+
+	public int addRealEstateAsField(int realtorId, String address, int area, String type, int price, int rentPrice) {
+		return realEstateMapper.insertRealEstateAsField(realtorId, address, area, type, price, rentPrice);
+	}
+
+	public int updateRealEstateById(int id, String type, int price) {
+		return realEstateMapper.updateRealEstateById(id, type, price);
+	}
 }
