@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>판매자 추가</title>
+<title>${title}</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
 	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
@@ -20,22 +20,10 @@
 </head>
 <body>
 	<div class="container">
-		<h1>판매자 추가</h1>	
-		<form method="post" action="/lesson04/quiz01/add-seller">
-			<div class="form-group">
-				<label for="nickname">닉네임</label>
-				<input type="text" id="nickname" name="nickname" class="form-control col-2">
-			</div>
-			<div class="form-group">
-				<label for="profileImageUrl">프로필 사진 url</label>
-				<input type="text" id="profileImageUrl" name="profileImageUrl" class="form-control col-9">
-			</div>
-			<div class="form-group">
-				<label for="temperature">온도</label>
-				<input type="text" id="temperature" name="temperature" class="form-control col-2">
-			</div>
-			<input type="submit" value="추가" class="btn btn-primary">
-		</form>
+		<h1>${title}</h1>
+		<img alt="프로필 이미지" src="${seller.profileImageUrl}" width="250px" height="250px">
+		<div class="display-4">${seller.nickname}</div>
+		<h1 class="text-warning">${seller.temperature}</h1>
 	</div>
 </body>
 </html>
