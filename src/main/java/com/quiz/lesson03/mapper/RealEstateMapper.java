@@ -1,11 +1,11 @@
-package com.example.lesson03.mapper;
+package com.quiz.lesson03.mapper;
 
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import com.example.lesson03.domain.RealEstate;
+import com.quiz.lesson03.domain.RealEstate;
 
 @Mapper
 public interface RealEstateMapper {

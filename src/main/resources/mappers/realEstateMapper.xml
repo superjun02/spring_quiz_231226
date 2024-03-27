@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- <mapper namespace="com.example.lesson03.mapper.RealEstateMapper">
+ <mapper namespace="com.quiz.lesson03.mapper.RealEstateMapper">
  	<select id="selectRealEstateById" 
- 	resultType="com.example.lesson03.domain.RealEstate" parameterType="int">
+ 	resultType="com.quiz.lesson03.domain.RealEstate" parameterType="int">
  		SELECT
  			`id`
 			,`realtorId`
@@ -20,7 +20,7 @@
  			`id` = #{id}
  	</select>
  	<select id="selectRealEstateListByRentPrice" 
- 	resultType="com.example.lesson03.domain.RealEstate" parameterType="int">
+ 	resultType="com.quiz.lesson03.domain.RealEstate" parameterType="int">
  		SELECT
  			`id`
 			,`realtorId`
@@ -39,7 +39,7 @@
         	`rentPrice` &lt; #{rentPrice}
  	</select>
  	<select id="selectRealEstateListByArea" 
- 	resultType="com.example.lesson03.domain.RealEstate" parameterType="map">
+ 	resultType="com.quiz.lesson03.domain.RealEstate" parameterType="map">
  		SELECT
  			`id`
 			,`realtorId`
@@ -63,7 +63,7 @@
         	`price` < #{price}
         	]]>
  	</select>
- 	<insert id="insertRealEstate" parameterType="com.example.lesson03.domain.RealEstate">
+ 	<insert id="insertRealEstate" parameterType="com.quiz.lesson03.domain.RealEstate">
  		INSERT
  		INTO
  			`real_estate`
@@ -89,7 +89,7 @@
  			,NOW()
  		)
  	</insert>
- 	<insert id="insertRealEstateAsField" parameterType="com.example.lesson03.domain.RealEstate">
+ 	<insert id="insertRealEstateAsField" parameterType="com.quiz.lesson03.domain.RealEstate">
  		INSERT
  		INTO
  			`real_estate`

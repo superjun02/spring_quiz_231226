@@ -1,4 +1,4 @@
-package com.example.test;
+package com.quiz.test;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

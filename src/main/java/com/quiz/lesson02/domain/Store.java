@@ -1,4 +1,4 @@
-package com.example.lesson02.domain;
+package com.quiz.lesson02.domain;
 
 import java.util.Date;
 

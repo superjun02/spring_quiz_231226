@@ -1,4 +1,4 @@
-package com.example.lesson01;
+package com.quiz.lesson01;
 
 public class Board {
 	private String title;

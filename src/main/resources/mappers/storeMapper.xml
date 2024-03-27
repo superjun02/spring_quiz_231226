@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- <mapper namespace="com.example.lesson02.mapper.StoreMapper">
+ <mapper namespace="com.quiz.lesson02.mapper.StoreMapper">
  	<select id="selectStoreList" 
- 	resultType="com.example.lesson02.domain.Store">
+ 	resultType="com.quiz.lesson02.domain.Store">
  		SELECT
  			*
  		FROM
