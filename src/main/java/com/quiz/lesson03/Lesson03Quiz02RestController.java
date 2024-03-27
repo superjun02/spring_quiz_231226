@@ -37,14 +37,4 @@ public class Lesson03Quiz02RestController {
 		
 		return "입력 성공: " + rowCount;
 	}
-	
-	@RequestMapping("/3")
-	public String quiz03(
-			@RequestParam(value = "id") int id
-			,@RequestParam(value = "type") String type 
-			,@RequestParam(value = "price") int price) {
-		int rowCount = realEstateBO.updateRealEstateById(id, type, price);
-		
-		return "수정 성공: " + rowCount;
-	}
 }	
