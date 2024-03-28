@@ -38,11 +38,16 @@ public class Lesson04Quiz01Controller {
 	
 	// http://localhost:8080/lesson04/quiz01/seller-info-view
 	@GetMapping("/seller-info-view")
-	public String sellerInfoView(Model model) {
+	public String sellerInfoView(Model model, 
+			@RequestParam(value = "id", required = false) Integer id) {
 		Seller seller = new Seller();
 		
 		// DB SELECT
-		seller = sellerBO.getSellerLatest();
+		if (id == null) {
+			seller = sellerBO.getLatestSeller();
+		} else {
+			seller = sellerBO.getSellerById(id);
+		}
 		
 		model.addAttribute("seller", seller);
 		model.addAttribute("title", "판매자 정보");
