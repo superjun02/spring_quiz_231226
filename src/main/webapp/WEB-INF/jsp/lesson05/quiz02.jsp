@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>방금 가입된 공인중개사 정보</title>
+<title>Quiz02</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
 	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
@@ -20,38 +21,23 @@
 </head>
 <body>
 	<div class="container">
-		<h1>공인중개사 정보</h1>
-		<table class="table table-striped">
-			<tr>
-				<th>ID</th>
-				<td>${data.id}</td>
-			</tr>
-			<tr>
-				<th>상호명</th>
-				<td>${data.office}</td>
-			</tr>
-			<tr>
-				<th>전화 번호</th>
-				<td>${data.phoneNumber}</td>
-			</tr>
-			<tr>
-				<th>주소</th>
-				<td>${data.address}</td>
-			</tr>
-			<tr>
-				<th>등급</th>
-				<td>${data.grade}</td>
-			</tr>
-			<tr>
-				<th>생성일</th>
-				<td>${data.createdAt}</td>
-			</tr>
-			<tr>
-				<th>수정일</th>
-				<td>${data.updatedAt}</td>
-			</tr>
+		<h1>HOT 5</h1>
+		<table class="table text-center">
+			<thead>
+				<tr>
+					<th>순위</th>
+					<th>제목</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${musicRanking}" var="music" varStatus="status">
+					<tr>
+						<td>${status.count}</td>
+						<td>${music}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
 		</table>
-
 	</div>
 </body>
 </html>
