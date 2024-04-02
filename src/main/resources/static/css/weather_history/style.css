@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.wrap {
+	width: 1300px;
+}
+#logo {
+	height: 60px;
+}
+#nav {
+	background-color: #6495ED;
+}
+footer {
+	height: 100px;
+	font-size: 12px;
+	color: gray;
+}
+.side-nav {
+	height: 50px;
+}
+#footer-logo {
+	filter: grayscale(90%);
+	height: 70px;
+}
+.twoLetter {
+	width: 50px;
+}
+.threeLetter {
+	width:  70px;
+}
+.fourLetter {
+	width: 120px;
+}
