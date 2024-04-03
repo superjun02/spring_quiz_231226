@@ -32,7 +32,7 @@
 			</div>
 			<div>
 				<c:forEach items="${storeList}" var="store">
-					<a href="/store/storeReview?storeId=${store.id}&storeName=${store.name}" class="text-decoration-none">
+					<a href="/store/store-review?storeId=${store.id}&storeName=${store.name}" class="text-decoration-none">
 						<div class="storeBox mt-3">
 							<div class="p-3">
 								<h3>${store.name}</h3>

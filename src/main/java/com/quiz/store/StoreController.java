@@ -32,7 +32,7 @@ public class StoreController {
 		return "store/storeList";
 	}
 	
-	@GetMapping("/storeReview")
+	@GetMapping("/store-review")
 	public String storeReview(Model model,
 			@RequestParam(value = "storeId") int storeId,
 			@RequestParam(value = "storeName") String storeName) {
