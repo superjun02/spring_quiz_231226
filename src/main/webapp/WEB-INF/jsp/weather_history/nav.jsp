@@ -6,17 +6,15 @@
 			<img alt="로고" src="/img/KMA_logo.svg" height="50px">
 		</div>
 	</div>
-	<ul class="nav nav-fill flex-column">
-		<li class="side-nav nav-item d-flex align-items-center"><a
-			href="/weather/history-view"
-			class="text-white font-weight-bold text-decoration-none">날씨</a></li>
-		<li class="side-nav nav-item d-flex align-items-center"><a
-			href="/weather/add-weather-view"
-			class="text-white font-weight-bold text-decoration-none">날씨입력</a></li>
-		<li class="side-nav nav-item d-flex align-items-center"><a
-			href="#" class="text-white font-weight-bold text-decoration-none">테마날씨</a></li>
-		<li class="side-nav nav-item d-flex align-items-center"><a
-			href="#" class="text-white font-weight-bold text-decoration-none">관측
+	<ul class="nav flex-column">
+		<li><a href="/weather/history-view"
+			class="nav-link text-white font-weight-bold text-decoration-none side-nav">날씨</a></li>
+		<li><a href="/weather/add-weather-view"
+			class="nav-link text-white font-weight-bold text-decoration-none">날씨입력</a></li>
+		<li><a href="#"
+			class="nav-link text-white font-weight-bold text-decoration-none">테마날씨</a></li>
+		<li><a href="#"
+			class="nav-link text-white font-weight-bold text-decoration-none">관측
 				기후</a></li>
 	</ul>
 </nav>
