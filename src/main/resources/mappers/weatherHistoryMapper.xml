@@ -15,6 +15,9 @@
 			,`updatedAt`
 		FROM
 			`weatherhistory`
+		ORDER BY
+			`date`
+        DESC;
  	</select>
  	<insert id="insertWeatherHistory" parameterType="com.quiz.weather_history.domain.WeatherHistory">
  		INSERT INTO
