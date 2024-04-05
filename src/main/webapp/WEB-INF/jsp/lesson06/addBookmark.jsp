@@ -95,7 +95,7 @@
 					return;
 				}
 				
-				if (url != urlBuffer) {
+				if (url != urlBuffer) { // [등록 가능한 주소입니다.] 상태에서 다른 URL을 넣어서 중복확인 무시하는 방법 억제
 					alert("중복 확인을 해주세요");
 					return;
 				}
