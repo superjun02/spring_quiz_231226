@@ -56,7 +56,7 @@
 					, data: {"url":url}
 					, success: function(data) {
 						if (data.is_duplication) {
-							$('#urlStatusBar').append('<span class="text-danger">이미 등록되 있는 주소입니다.</span>');
+							$('#urlStatusBar').append('<span class="text-danger">이미 등록 되있는 주소입니다.</span>');
 							$('#urlStatusBar').addClass('isDuplicateTrue');
 						} else {
 							$('#urlStatusBar').append('<span class="text-success">등록 가능한 주소입니다.</span>');
@@ -91,7 +91,7 @@
 				}
 				
 				if ($('#urlStatusBar').hasClass('isDuplicateTrue')) {
-					alert("이미 등록되 있는 주소는 추가할 수 없습니다.");
+					alert("이미 등록 되있는 주소는 추가할 수 없습니다.");
 					return;
 				}
 				
