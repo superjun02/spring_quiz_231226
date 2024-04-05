@@ -37,10 +37,32 @@
 						<td>${status.count}</td>
 						<td>${bookmark.name}</td>
 						<td>${bookmark.url}</td>
+						<td><button class="btn btn-danger deleteBtn" value="${bookmark.id}">삭제</button></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 	</div>
+	<script>
+		$(document).ready(function() {
+			$('.deleteBtn').on('click', function(e) {
+				let id = $(this).val();
+				
+				$.ajax({
+					type: "POST"
+					, url: "/lesson06/quiz01/delete-bookmark"
+					, data: {"id":id}
+					, success: function(data) {
+						if (data == "성공") {
+							location.href="/lesson06/quiz01/bookmark-list-view";
+						}
+					}
+					, error:function(error) {
+						alert(error);
+					}
+				});
+			});
+		});
+	</script>
 </body>
 </html>

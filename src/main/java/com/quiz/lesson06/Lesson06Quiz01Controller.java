@@ -1,7 +1,9 @@
 package com.quiz.lesson06;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -45,5 +47,28 @@ public class Lesson06Quiz01Controller {
 		
 		model.addAttribute("bookmarkList", bookmarkList);
 		return "lesson06/bookmarkList";
+	}
+	
+	@ResponseBody
+	@GetMapping("/is-duplication-url")
+	public Map<String, Object> isDuplicationUrl(
+			@RequestParam(value="url") String url) {
+		// DB 조회
+		boolean isDuplication = bookmarkBO.isDuplicationByUrl(url);
+		
+		Map<String, Object> result = new HashMap<>();
+		result.put("code", 200);
+		result.put("is_duplication", isDuplication);
+		
+		return result;
+	}
+	
+	@ResponseBody
+	@PostMapping("/delete-bookmark")
+	public String deleteBookmark(@RequestParam(value="id") String id) {
+		int deleteId = Integer.valueOf(id);
+		
+		bookmarkBO.deleteBookmarkById(deleteId);
+		return "성공";
 	}
 }
