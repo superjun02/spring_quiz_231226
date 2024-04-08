@@ -92,11 +92,9 @@
 						if (!data.reserveInfo.id) {
 							alert("예약 내역이 없습니다.");
 						} else {
-							/* var date = new Date(data.reserveInfo.date);
-							var formattedDate = date.toISOString().slice(0, 10); */
-							
+							var formatDate = data.reserveInfo.date.substring(0, 10);
 							alert("이름:" + data.reserveInfo.name + 
-									"\n날짜:" + data.reserveInfo.date + 
+									"\n날짜:" + formatDate + 
 									"\n일수:" + data.reserveInfo.day +
 									"\n인원:" + data.reserveInfo.headcount +
 									"\n상태:" + data.reserveInfo.state);
