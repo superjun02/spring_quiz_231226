@@ -89,7 +89,7 @@
 					, url: "/booking/check-booking"
 					, data: {"name":name, "phoneNumber":phoneNumber}
 					, success: function(data) {
-						if (!data.reserveInfo.id) {
+						if (data.reserveInfo == null) {
 							alert("예약 내역이 없습니다.");
 						} else {
 							var formatDate = data.reserveInfo.date.substring(0, 10);

@@ -28,8 +28,7 @@ public class BookingBO {
 		if (bookingMapper.isBookingByNameAndPhoneNumber(name, phoneNumber)) {
 			return bookingMapper.selectBookingByNameAndPhoneNumber(name, phoneNumber);
 		} else {
-			Booking booking = new Booking();
-			return booking;
+			return null;
 		}
 		
 	}
