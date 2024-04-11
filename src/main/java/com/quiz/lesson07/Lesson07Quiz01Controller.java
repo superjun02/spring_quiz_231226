@@ -14,7 +14,7 @@ public class Lesson07Quiz01Controller {
 	@Autowired
 	private CompanyBO companyBO;
 	
-	@GetMapping("save1")
+	@GetMapping("/save1")
 	public String save1(Model model) {
 		String name = "넥슨";
 		String business = "컨텐츠 게임";
@@ -26,7 +26,7 @@ public class Lesson07Quiz01Controller {
 		return "lesson07/saveData";
 	}
 	
-	@GetMapping("save2")
+	@GetMapping("/save2")
 	public String save2(Model model) {
 		String name = "버블팡";
 		String business = "여신 금융업";
