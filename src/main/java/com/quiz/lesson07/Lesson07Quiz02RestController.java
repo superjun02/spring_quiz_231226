@@ -33,7 +33,7 @@ public class Lesson07Quiz02RestController {
 	
 	@GetMapping("/4")
 	public List<RecruitEntity> q4() {
-		return recruitBO.findByTypeOrSalaryAfter("정규직", 9000);
+		return recruitBO.findByTypeOrSalaryGreaterThanEqual("정규직", 9000);
 	}
 	
 	@GetMapping("/5")

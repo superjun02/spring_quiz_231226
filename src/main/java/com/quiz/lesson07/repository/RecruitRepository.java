@@ -13,7 +13,7 @@ public interface RecruitRepository extends JpaRepository<RecruitEntity, Integer>
 
 	public List<RecruitEntity> findByPositionAndType(String position, String type);
 
-	public List<RecruitEntity> findByTypeOrSalaryAfter(String type, int salary);
+	public List<RecruitEntity> findByTypeOrSalaryGreaterThanEqual(String type, int salary);
 
 	public List<RecruitEntity> findTop3ByTypeOrderBySalaryDesc(String type);
 

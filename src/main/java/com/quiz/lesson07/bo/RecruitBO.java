@@ -25,8 +25,8 @@ public class RecruitBO {
 		return recruitRepository.findByPositionAndType(position, type);
 	}
 
-	public List<RecruitEntity> findByTypeOrSalaryAfter(String type, int salary) {
-		return recruitRepository.findByTypeOrSalaryAfter(type, salary);
+	public List<RecruitEntity> findByTypeOrSalaryGreaterThanEqual(String type, int salary) {
+		return recruitRepository.findByTypeOrSalaryGreaterThanEqual(type, salary);
 	}
 
 	public List<RecruitEntity> findTop3ByTypeOrderBySalaryDesc(String type) {
