@@ -37,5 +37,9 @@ public class RecruitBO {
 		return recruitRepository.findByRegionAndSalaryBetween(region, startNum, endNum);
 	}
 
+	public List<RecruitEntity> findByDeadlineAndSalaryAndType(String deadline, int startSalary, String type) {
+		return recruitRepository.findByDeadlineAndSalaryAndType(deadline, startSalary, type);
+	}
+
 	
 }

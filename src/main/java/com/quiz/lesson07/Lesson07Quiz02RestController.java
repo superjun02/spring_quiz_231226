@@ -45,4 +45,9 @@ public class Lesson07Quiz02RestController {
 	public List<RecruitEntity> q6() {
 		return recruitBO.findByRegionAndSalaryBetween("성남시 분당구", 7000, 8500);
 	}
+	
+	@GetMapping("/7")
+	public List<RecruitEntity> q7() {
+		return recruitBO.findByDeadlineAndSalaryAndType("2026-04-10", 8100, "정규직");
+	}
 }
