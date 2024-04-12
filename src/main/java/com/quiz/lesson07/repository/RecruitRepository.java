@@ -21,7 +21,8 @@ public interface RecruitRepository extends JpaRepository<RecruitEntity, Integer>
 
 	public List<RecruitEntity> findByRegionAndSalaryBetween(String region, int startNum, int endNum);
 
-	@Query(value = "select * from `recruit` where `deadline` > :deadline and `salary` >= :startSalary and `type` = :type", nativeQuery = true)
+	@Query(value = "select * from `recruit` where `deadline` > :deadline and `salary` >= :startSalary and `type` = :type order by `salary` desc"
+			, nativeQuery = true)
 	public List<RecruitEntity> findByDeadlineAndSalaryAndType(@Param("deadline") String deadline,
 			@Param("startSalary")int startSalary,
 			@Param("type") String type);
